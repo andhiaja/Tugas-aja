@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Tabel Data</title>
+</head>
+<style>
+    body {
+      background-color: #e3f2fd;
+      font-family: 'Poppins', sans-serif;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      min-height: 100vh;
+      margin: 0;
+    }
+
+    .pokok-body {
+      background-color: #ffffff;
+      border-radius: 15px;
+      box-shadow: 0 4px 20px rgba(0,0,0,0.1);
+      padding: 30px;
+      width: 500px;
+      text-align: center;
+    }
+
+    h1 {
+      color: #1976d2;
+      margin-bottom: 20px;
+    }
+
+    table {
+      width: 100%;
+      border-collapse: collapse;
+    }
+
+    th, td {
+      border: 1px solid #90caf9;
+      padding: 10px;
+      text-align: left;
+    }
+    th {
+      background-color: #bbdefb;
+    }
+    td {
+      background-color: #e3f2fd;
+    }
+    a {
+      display: inline-block;
+      margin-top: 20px;
+      text-decoration: none;
+      color: #1976d2;
+      font-weight: bold;
+    }
+  </style>
+<body>
+    <div class="pokok-body">
+  <h1>Data Mahasiswa</h1>
+
+  <table border="1" cellpadding="5" cellspacing="0">
+    <tr><th>NIM</th><td id="nim"></td></tr>
+    <tr><th>Nama</th><td id="nama"></td></tr>
+    <tr><th>Gender</th><td id="gender"></td></tr>
+    <tr><th>Tempat Lahir</th><td id="tempat"></td></tr>
+    <tr><th>Tanggal Lahir</th><td id="tgl_lahir"></td></tr>
+    <tr><th>Alamat</th><td id="alamat"></td></tr>
+    <tr><th>No. HP</th><td id="hp"></td></tr>
+    <tr><th>Email</th><td id="email"></td></tr>
+    <tr><th>Hobi</th><td id="hobi"></td></tr>
+  </table>
+
+  <br>
+  <a href="Mahasigma.html">Kembali ke Form</a>
+
+  <script>
+    const params = new URLSearchParams(window.location.search);
+    document.getElementById("nim").textContent = params.get("nim");
+    document.getElementById("nama").textContent = params.get("nama");
+    document.getElementById("gender").textContent = params.get("gender");
+    document.getElementById("tempat").textContent = params.get("tempat");
+    document.getElementById("tgl_lahir").textContent = params.get("tgl_lahir");
+    document.getElementById("alamat").textContent = params.get("alamat");
+    document.getElementById("hp").textContent = params.get("hp");
+    document.getElementById("email").textContent = params.get("email");
+    document.getElementById("hobi").textContent = params.get("hobi");
+  </script>
+</div>
+</body>
+</html>

@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Input Data</title>
+</head>
+<style>
+    body {
+      background-color: #e8f4fc;
+      font-family: 'Poppins', sans-serif;
+      color: #333;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      min-height: 100vh;
+      margin: 0;
+    }
+    .container {
+      background-color: #ffffff;
+      border-radius: 15px;
+      box-shadow: 0 4px 20px rgba(0,0,0,0.1);
+      padding: 30px;
+      width: 400px;
+      text-align: center;
+    }
+    h1 {
+      color: #1e88e5;
+      margin-bottom: 20px;
+    }
+    form {
+      text-align: left;
+    }
+    label {
+      display: block;
+      margin-top: 10px;
+      font-weight: 500;
+    }
+    input, select, textarea {
+      width: 100%;
+      padding: 8px;
+      margin-top: 5px;
+      border: 1px solid #90caf9;
+      border-radius: 8px;
+      font-size: 14px;
+    }
+    input[type="radio"] {
+      width: auto;
+      margin-right: 5px;
+    }
+    .kirim-aja {
+      background-color: #64b5f6;
+      color: white;
+      border: none;
+      padding: 10px;
+      width: 100%;
+      border-radius: 8px;
+      margin-top: 20px;
+      cursor: pointer;
+      font-size: 20px;
+    }
+  </style>
+<body>
+    <div class="container">
+  <h1>Formulir</h1>
+
+  <form action="tabelmahasigma.html" method="get">
+    <label>NIM:</label><br>
+    <input type="text" name="nim" required><br><br>
+
+    <label>Nama:</label><br>
+    <input type="text" name="nama" required><br><br>
+
+    <label>Gender:</label><br>
+    <input type="radio" name="gender" value="Laki-laki"> Laki-laki
+    <input type="radio" name="gender" value="Perempuan"> Perempuan<br><br>
+
+    <label>Tempat Lahir (Kota):</label><br>
+    <select name="tempat" required>
+      <option value="">--Pilih Kota--</option>
+     <option>Jawe</option>
+      <option>Bali</option>
+      <option>Kupang</option>
+    </select><br><br>
+
+    <label>Tanggal Lahir:</label><br>
+    <input type="Date" name="Tanggal Lahir" required><br><br>
+
+    <label>Alamat:</label><br>
+    <textarea name="alamat" rows="2"></textarea><br><br>
+
+    <label>No. HP:</label><br>
+    <input type="tel" name="hp" required><br><br>
+
+    <label>Email:</label><br>
+    <input type="email" name="email" required><br><br>
+
+    <label>Hobi:</label><br>
+    <select name="hobi">
+      <option>Membaca</option>
+      <option>Menulis</option>
+      <option>Main Game</option>
+      <option>Tidur</option>
+      <option>Habisin uang dengan Gaya</option>
+    </select><br><br>
+
+    <button type="submit" class="kirim-aja">Kirim dah</button>
+  </form>
+</div>
+</body>
+</html>
