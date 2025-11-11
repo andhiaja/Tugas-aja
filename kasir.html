@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Program Kasir Sederhana</title>
+</head>
+<body>
+    <center>
+        <h2>Program Kasir Sederhana</h2>
+
+        <label>Harga Barang: </label><br>
+        <input type="text" id="harga"><br><br>
+
+        <label>Jumlah Barang: </label><br>
+        <input type="number" id="jumlah"><br><br>
+
+        <button onclick="hitungTotal()">Hitung Total</button>
+
+        <p id="hasil"></p>
+    </center>
+
+    <script>
+        function hitungTotal() {
+            let harga = document.getElementById("harga").value;
+            let jumlah = document.getElementById("jumlah").value;
+            let total = harga * jumlah;
+            let diskon = 0;
+            if (total > 100000) {
+                diskon = total * 0.1;
+            }
+            let totalBayar = total - diskon;
+            document.getElementById("hasil").innerHTML =
+                "Total Belanja: Rp " + total +
+                "<br>Diskon: Rp " + diskon +
+                "<br>Total Bayar Setelah Diskon: Rp " + totalBayar;
+        }
+    </script>
+</body>
+</html>
